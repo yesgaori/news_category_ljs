@@ -10,11 +10,11 @@ category= ['Politics','Economics','Social','Culture','World','IT']
 
 options = ChromeOptions()
 options.add_argument('lang=ko_KR')
-# options.add_argument('headless')
+options.add_argument('headless')
 
 service = ChromeService(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
-my_section = 0 #0:POlitics, 1:Economic, 2:Social ,3:Culture ,4:World ,5: IT
+my_section = 3 #0:POlitics, 1:Economic, 2:Social ,3:Culture ,4:World ,5: IT
 url = 'https://news.naver.com/section/10{}'.format(my_section)
 driver.get(url)
 
